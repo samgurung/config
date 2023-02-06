@@ -1,0 +1,27 @@
+#!/bin/sh
+img=/tmp/i3loc.png
+case "$1" in
+    lock)
+        i3lock-fancy-dualmonitor -p -f Helvetica-Bold & sleep 10 && xset dpms force off
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+         i3lock-fancy-dualmonitor -f Helvetica-Bold  & systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0
