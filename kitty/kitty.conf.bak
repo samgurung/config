@@ -1,5 +1,5 @@
 # Colors
-background_opacity 0.9
+background_opacity 0.85
 #foreground         #d2d7d7
 #background         #120e0a
 #cursor             #d2d7d7
@@ -77,18 +77,18 @@ background_opacity 0.9
 #include ./kitty-alternative-themes/themes/Monokai_Pro_(Filter_Ristretto).conf
 include theme.conf
 # Fonts {{{
-font_family         FantasqueSansMono Nerd Font Mono
+font_family         Fantasque Sans Mono Regular Nerd Font Complete 
 bold_font           auto
 italic_font         auto
 bold_italic_font    auto
-font_size           13.0
+font_size           12.5
 force_ltr           no
 adjust_line_height  110%
 adjust_column_width 0
 disable_ligatures   cursor
 # }}}
 # Cursor {{{
-cursor_shape               block
+cursor_shape               beam
 cursor_blink_interval      -1
 cursor_stop_blinking_after 15.0
 # }}}
@@ -101,7 +101,7 @@ touch_scroll_multiplier       1.0
 # }}}
 # Mouse {{{
 mouse_hide_wait             3.0
-url_color                   #458588
+# url_color                   #458588
 url_style                   single
 open_url_modifiers          kitty_mod
 open_url_with               qutebrowser
@@ -137,16 +137,16 @@ remember_window_size       yes
 enabled_layouts            tall,stack,fat,grid,splits,horizontal,vertical
 window_resize_step_cells   2
 window_resize_step_lines   2
-window_border_width        0.5pt
+window_border_width        2pt
 draw_minimal_borders       no
 window_margin_width        1.5
 single_window_margin_width 0
-window_padding_width       2
+window_padding_width       3
 placement_strategy         center
-active_border_color        #98971a
-inactive_border_color      #32302f
-bell_border_color          #d79921
-inactive_text_alpha        0.7
+# active_border_color        #98971a
+# inactive_border_color      #32302f
+# bell_border_color          #d79921
+#inactive_text_alpha        0.6
 hide_window_decorations    no
 resize_debounce_time       0.1
 resize_draw_strategy       static
@@ -163,17 +163,17 @@ tab_separator             " | "
 tab_activity_symbol       none
 tab_title_template        "{index}: {title}{' ['+num_windows.__str__()+']' if num_windows > 1 else ''}"
 active_tab_title_template "{index}: {title}{' ['+num_windows.__str__()+']' if num_windows > 1 and layout_name == 'stack' else ''}"
-active_tab_foreground     #d4be98
-active_tab_background     #504945
+# active_tab_foreground     #d4be98
+# active_tab_background     #504945
 active_tab_font_style     bold
-inactive_tab_foreground   #a89984
-inactive_tab_background   #282828
+# inactive_tab_foreground   #a89984
+# inactive_tab_background   #282828
 inactive_tab_font_style   normal
-tab_bar_background        none
+# tab_bar_background        none
 # }}}
 # Advanced settings {{{
 shell                /usr/bin/zsh
-editor               vim
+editor               nv
 close_on_child_death yes
 allow_remote_control yes
 listen_on            unix:/tmp/mykitty
@@ -218,24 +218,33 @@ map kitty_mod+7     goto_tab 7
 map kitty_mod+8     goto_tab 8
 map kitty_mod+9     goto_tab 9
 map kitty_mod+0     goto_tab 10
-map kitty_mod+n     next_window
-map kitty_mod+e     previous_window
+map kitty_mod+0xff53  next_window
+map kitty_mod+0xff51  previous_window
 map kitty_mod+space>j move_window bottom
 map kitty_mod+space>k move_window top
 map kitty_mod+space>h move_window left
 map kitty_mod+space>l move_window right
 map kitty_mod+space>c load_config_file
+map kitty_mod+0xff52  neighboring_window up
+map kitty_mod+0xff54  neighboring_window down
+
 map kitty_mod+shift+j kitten pass_keys.py neighboring_window bottom ctrl+n "^((.* - nvim)|neomutt)$"
 map kitty_mod+shift+k kitten pass_keys.py neighboring_window top    ctrl+e "^((.* - nvim)|neomutt)$"
 map kitty_mod+shift+h kitten pass_keys.py neighboring_window left   ctrl+y "^((.* - nvim)|neomutt)$"
 map kitty_mod+shift+l kitten pass_keys.py neighboring_window right  ctrl+o "^((.* - nvim)|neomutt)$"
 map alt+t kitten zoom.py
-map kitty_mod+l next_layout
+map ctrl+shift+l next_layout
 ## }}}
 ## Miscellaneous {{{
-map kitty_mod+t kitten hints
+map kitty_mod+h kitten hints
 map kitty_mod+space>r clear_terminal reset active
 ## }}}
 # }}}
 # vim:foldmethod=marker:foldlevel=0
 
+
+
+# BEGIN_KITTY_THEME
+# Gruvbox Material Dark Hard
+include current-theme.conf
+# END_KITTY_THEME
