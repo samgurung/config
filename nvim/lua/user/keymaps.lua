@@ -83,6 +83,8 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+-- keymap("map <Leader>lf :lua vim.lsp.buf.format({nil, filter = function(cl) return cl.name == 'intelephense' end},10000)<CR>")
+
 
 -- Linting
 keymap('n', '<leader>do', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
