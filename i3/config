@@ -253,9 +253,9 @@ exec_always --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 # font pango:Droid Sans Mono Dotted 12
 # font pango:hermit 12
 # font pango:Inconsolata 15
-# font pango:monospace 12
+ font pango:Hack Nerd Font Mono 9
 # font pango:SourceCodePro-SemiBold 11
- font pango:Source Code Pro for Powerline, FontAwesome Regular, Icons 9
+ # font pango:Source Code Pro for Powerline, FontAwesome Regular, Icons 9
 # font pango:Terminus 14px
 # font pango:UbuntuMono-regular 12
 # from ttf-chromeos-fonts

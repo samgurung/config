@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/skg/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/skg/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/skg/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -163,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/skg/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/home/skg/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -193,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/skg/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-transparent"] = {
+    loaded = true,
+    path = "/home/skg/.local/share/nvim/site/pack/packer/start/nvim-transparent",
+    url = "https://github.com/xiyaowong/nvim-transparent"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
