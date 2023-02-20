@@ -43,14 +43,21 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.completion.spell, -- You still need to execute `:set spell`
 		diagnostics.eslint, -- Add eslint to js projects
-		diagnostics.phpcs,
+		diagnostics.phpcs.with({
+      prefer_local = "./vendor/bin",
+      args = {
+        "--standard=phpcs.xml",
+      }
+    }),
 		formatting.prettier.with({
 			extra_filetypes = { "toml" },
 			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
 		}),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-		formatting.phpcbf,
+		formatting.phpcbf.with({
+      prefer_local = "./vendor/bin",
+    }),
 		formatting.google_java_format,
 		diagnostics.flake8,
 	},

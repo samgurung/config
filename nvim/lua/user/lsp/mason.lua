@@ -7,8 +7,8 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
-  "phpactor",
-  -- "intelephense",
+  -- "phpactor",
+  "intelephense",
 }
 
 local settings = {
